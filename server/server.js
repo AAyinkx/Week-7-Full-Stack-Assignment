@@ -31,9 +31,7 @@ app.get("/", (request, response) => {
 //READ endpoint
 app.get("/book_reviews", async (request, response) => {
   try {
-    const bookData = await db.query(
-      `SELECT id, title, rating, review FROM books;`
-    );
+    const bookData = await db.query(`SELECT * FROM books;`);
     console.log(bookData);
     response.json(bookData.rows);
     response.status(200).json({ success: true });
@@ -47,12 +45,10 @@ app.post("/add_review", async (request, response) => {
     const { username, title, author, rating, review, src, date } = request.body;
 
     const newReview = await db.query(
-      `
-          INSERT INTO books (username, title, author, rating, review, src, date)
+      `INSERT INTO books (username, title, author, rating, review, src, date)
           VALUES ($1, $2, $3, $4, $5, $6, $7);
           `,
       [username, title, author, rating, review, src, date]
-      //   [biscuit.biscuit_name, biscuit.src, biscuit.description, biscuit.crunchiness]
     );
     response.status(200).json(newReview.rows);
   } catch (error) {
