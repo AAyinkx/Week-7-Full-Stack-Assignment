@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { dateISOtoLocal } from "../Utils/dateFormat";
+
 import defaultImage from "../../public/image-not-available.png";
+import "./ReadReview.css";
 export default function ReadReviews() {
   const [reviews, setReviews] = useState([]);
-  const [isBroken, setIsBroken] = useState(false);
+
   useEffect(() => {
     async function getReviews() {
       const response = await fetch("http://localhost:8080/book_reviews");
@@ -17,31 +19,88 @@ export default function ReadReviews() {
   }, []);
 
   function handleError(e) {
-    setIsBroken(true);
-    if (isBroken == true) {
-      e.currentTarget.src = defaultImage;
+    e.currentTarget.src = defaultImage;
+  }
+  function StarNumber(number) {
+    switch (number) {
+      case 2:
+        return (
+          <>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+          </>
+        );
+      case 4:
+        return (
+          <>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+          </>
+        );
+      case 5:
+        return (
+          <>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+          </>
+        );
+
+      default:
+        return (
+          <>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star"></i>
+          </>
+        );
     }
   }
 
   return (
     <>
+      <h1 id="read-reviews-title">
+        <i className="fa-solid fa-book-bookmark"></i> Reviews
+      </h1>
       <div id="review-container">
-        {reviews.map((review) => (
+        {reviews.reverse().map((review) => (
           <div key={review.id} className="review">
-            <div>
+            <div className="book-cover">
               <img
                 alt={`Book cover of ${review.title} `}
                 src={review.src}
                 onError={handleError}
               ></img>
             </div>
-            <div>{dateISOtoLocal(review.date)}</div>
-            <div>{review.username}</div>
-            <div>
-              {review.title}, <em>{review.author}</em>
+            <div className="main-review">
+              <div className="date">{dateISOtoLocal(review.date)}</div>
+              <div className="username">{review.username}</div>
+              <div className="title-author">
+                {review.title}, <em>{review.author}</em>
+              </div>
+              <div className="rating-stars">{StarNumber(review.rating)}</div>
+              <div className="book-review">{review.review}</div>
             </div>
-            <div>{review.rating}</div>
-            <div>{review.review}</div>
           </div>
         ))}
       </div>

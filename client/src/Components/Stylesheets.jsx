@@ -7,6 +7,10 @@ export default function Stylesheets() {
         href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Ribeye+Marrow&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css?family=Sue Ellen Francisco"
+        rel="stylesheet"
+      ></link>
     </>
   );
 }
