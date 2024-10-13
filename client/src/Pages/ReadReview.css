@@ -87,6 +87,6 @@
 }
 @media ((width<=450px)) {
   #review-container {
-    width: 250px;
+    width: 300px;
   }
 }
