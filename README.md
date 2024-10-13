@@ -1,4 +1,4 @@
-# **Week7 Assignment Reflection: Digital Guestbook 📖**
+# **Week7 Assignment Reflection: Book Reviews Site 📖**
 
 ## WireFrames
 
