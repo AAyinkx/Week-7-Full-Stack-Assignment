@@ -33,8 +33,8 @@ app.get("/book_reviews", async (request, response) => {
   try {
     const bookData = await db.query(`SELECT * FROM books;`);
     console.log(bookData);
-    response.json(bookData.rows);
-    response.status(200).json({ success: true });
+
+    response.status(200).json(bookData.rows);
   } catch (error) {
     console.error("This is a fatal error!", error);
     response.status(500).json({ success: false });

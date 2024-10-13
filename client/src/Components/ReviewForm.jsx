@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./ReviewForm.css";
 export default function ReviewForm() {
   const [formValues, setFormValues] = useState({
     username: "",
@@ -37,7 +37,7 @@ export default function ReviewForm() {
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form id="the-form" onSubmit={handleSubmit}>
         <div className="form-section">
           <div className="title">
             <label htmlFor="username">Username</label>
@@ -94,6 +94,8 @@ export default function ReviewForm() {
           <div className="input">
             <input
               type="number"
+              min="0"
+              max="5"
               id="rating"
               name="rating"
               placeholder="Write your rating of the book out of 5 stars"
