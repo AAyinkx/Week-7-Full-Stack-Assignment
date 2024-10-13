@@ -1,5 +1,7 @@
 # **Week7 Assignment Reflection: Book Reviews Site 📖**
 
+- My SQL queries are in a file in my server
+
 ## WireFrames
 
 ![alt text](<client/public/Week 7 Book Nook Full Stack WireFrame.png>)
@@ -32,6 +34,7 @@
 
 - I think this week's assignment was actually quite challenging due to how many different part we had to do. I also struggled a lot with setting up the connections initially which took me the longest time
 - I set up all my connections on a call with someone else because we found that it was a lot easier to spot mistakes and it made the process a lot smoother
+- One thing that i found was that when i deployed my site to Render, if you refreshed on an endpoint, it would return as 'PageNotFound". Is this because react doesn't actually "Create" endpoints? So when we actually deploy our site those endpoints don't exist?
 
 ## What bugs did I encounter? 🪲
 
