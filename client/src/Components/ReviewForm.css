@@ -72,11 +72,11 @@ input::placeholder {
 }
 @media ((width<=475px)) {
   #the-form {
-    width: 350px;
+    width: 300px;
   }
 }
 @media ((width<=350px)) {
   #the-form {
-    width: 250px;
+    width: 200px;
   }
 }
