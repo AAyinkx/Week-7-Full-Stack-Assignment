@@ -85,8 +85,8 @@
     font-size: 20px;
   }
 }
-@media ((width<=350px)) {
-  #the-form {
+@media ((width<=450px)) {
+  #review-container {
     width: 250px;
   }
 }

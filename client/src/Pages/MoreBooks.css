@@ -1,0 +1,18 @@
+#more-books-title {
+  font-size: 40px;
+  color: #6d071a;
+}
+.sort-tags {
+  color: white;
+  text-align: center;
+  display: inline-block;
+  padding: 16px 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.sort-tags:hover {
+  color: #4a9d9c;
+}
+.sort {
+  color: #0d6e6e;
+}

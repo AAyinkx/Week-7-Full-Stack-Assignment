@@ -9,6 +9,7 @@ import AddReviews from "./Pages/AddReviews";
 import Header from "./Components/Header";
 import PageNotFound from "./Components/PageNotFound";
 import Navbar from "./Components/Navbar";
+import MoreBooks from "./Pages/MoreBooks";
 
 export default function () {
   return (
@@ -20,6 +21,7 @@ export default function () {
         <Route path="/" element={<Homepage />} />
         <Route path="/addReviews" element={<AddReviews />} />
         <Route path="/readReviews" element={<ReadReviews />} />
+        <Route path="/moreBooks" element={<MoreBooks />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

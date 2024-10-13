@@ -94,7 +94,7 @@ export default function ReviewForm() {
           <div className="input">
             <input
               type="number"
-              min="0"
+              min="1"
               max="5"
               id="rating"
               name="rating"

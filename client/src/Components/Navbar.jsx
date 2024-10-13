@@ -20,6 +20,9 @@ export default function Navbar() {
           <Link to="/addReviews">
             <i className="fa-solid fa-pencil fa-flip-horizontal"></i> Add Review
           </Link>
+          <Link to="/moreBooks">
+            <i className="fa-solid fa-book-open"></i> More Books
+          </Link>
         </div>
         <div className="dropdown">
           <i className="fa fa-bars" id="dropbtn" onClick={dropFunction}></i>
@@ -38,6 +41,9 @@ export default function Navbar() {
             <Link to="/addReviews">
               <i className="fa-solid fa-pencil fa-flip-horizontal"></i> Add
               Review
+            </Link>
+            <Link to="/moreBooks">
+              <i className="fa-solid fa-book-open"></i> More Books
             </Link>
           </div>
         </div>
