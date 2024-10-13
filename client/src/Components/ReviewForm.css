@@ -52,6 +52,9 @@ textarea {
   font-family: "Sue Ellen Francisco";
   overflow-y: scroll;
 }
+input::placeholder {
+  font-size: 18px;
+}
 
 #submit-button:hover {
   background-color: #d5b48b;
