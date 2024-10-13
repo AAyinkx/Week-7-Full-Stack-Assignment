@@ -18,7 +18,7 @@ export default function ReviewForm() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(formValues);
-    fetch("http://localhost:8080/add_review", {
+    fetch("https://week-7-full-stack-assignment.onrender.com/add_review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

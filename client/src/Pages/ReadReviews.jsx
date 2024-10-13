@@ -8,7 +8,9 @@ export default function ReadReviews() {
 
   useEffect(() => {
     async function getReviews() {
-      const response = await fetch("http://localhost:8080/book_reviews");
+      const response = await fetch(
+        "https://week-7-full-stack-assignment.onrender.com/book_reviews"
+      );
       // console.log(response);
       //!Change this to render server link when deployed
       const reviewData = await response.json();
