@@ -63,7 +63,7 @@ export default function ReviewForm() {
               type="text"
               id="title"
               name="title"
-              placeholder="Write the title of your book"
+              placeholder="What book would you like to review?"
               required
               value={formValues.title}
               onChange={handleFormValuesChange}
@@ -80,7 +80,7 @@ export default function ReviewForm() {
               type="text"
               id="author"
               name="author"
-              placeholder="Write name of the Author"
+              placeholder="What is the name of the Author?"
               required
               value={formValues.author}
               onChange={handleFormValuesChange}
@@ -98,7 +98,7 @@ export default function ReviewForm() {
               max="5"
               id="rating"
               name="rating"
-              placeholder="Write your rating of the book out of 5 stars"
+              placeholder="What would you rate the book out of 5 stars?"
               required
               value={formValues.rating}
               onChange={handleFormValuesChange}
@@ -113,7 +113,7 @@ export default function ReviewForm() {
             <textarea
               id="review"
               name="review"
-              placeholder="Please write your review of the book"
+              placeholder="What did you think of the book?"
               required
               value={formValues.review}
               onChange={handleFormValuesChange}
@@ -144,7 +144,7 @@ export default function ReviewForm() {
               type="date"
               id="date"
               name="date"
-              placeholder="Whhat day did you complete your book?"
+              placeholder="What day did you finish reading your book?"
               required
               value={formValues.date}
               onChange={handleFormValuesChange}
